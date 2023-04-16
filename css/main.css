@@ -1653,14 +1653,6 @@ pre code {
   top: 1.25em;
   width: 4px;
 }
-.post-body p a {
-  color: #0593d3;
-  border-bottom: none;
-}
-.post-body p a:hover {
-  color: #fc6423;
-  text-decoration: underline;
-}
 .post-body {
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
@@ -1679,6 +1671,14 @@ pre code {
   .post-body {
     text-align: justify;
   }
+}
+.post-body .post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body .post-body p a:hover {
+  color: #fc6423;
+  text-decoration: underline;
 }
 .post-body h1 .header-anchor,
 .post-body h2 .header-anchor,
