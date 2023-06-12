@@ -29,7 +29,7 @@
 <meta property="og:description" content="前言：  本人三本菜鸡，在大一的时候，室友选c++期末大作业选的正好是这个，当时也在网上找了一下这个算法的相关代码，但是看不懂。后来自学算法的时候学到了动态规划，正好遇到了这个题，可是时过半年，还是没有明白这个动态规划，或者是说明白了思想，但是不会写代码。后来因为要准备蓝桥杯了（因为学校没有ACM队），所以还是强迫自己弄明白这个，看了很多视频，绕了很多弯路，最后终于明白了这题。因为淋过雨，所以更懂">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-11T15:10:08.000Z">
-<meta property="article:modified_time" content="2023-06-11T15:10:29.519Z">
+<meta property="article:modified_time" content="2023-06-12T10:08:54.769Z">
 <meta property="article:author" content="Amireux">
 <meta name="twitter:card" content="summary">
 
@@ -210,9 +210,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-11 23:10:08 / 修改时间：23:10:29" itemprop="dateCreated datePublished" datetime="2023-06-11T23:10:08+08:00">2023-06-11</time>
+      <time title="创建时间：2023-06-11 23:10:08" itemprop="dateCreated datePublished" datetime="2023-06-11T23:10:08+08:00">2023-06-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-12 18:08:54" itemprop="dateModified" datetime="2023-06-12T18:08:54+08:00">2023-06-12</time>
     </span>
 
   
@@ -222,7 +228,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.6k</span>
+      <span>3.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -250,13 +256,13 @@
 <h3 id="1-怎么表示当前的状态"><a href="#1-怎么表示当前的状态" class="headerlink" title="1.怎么表示当前的状态"></a>1.怎么表示当前的状态</h3><h3 id="2-状态转移方程是什么"><a href="#2-状态转移方程是什么" class="headerlink" title="2.状态转移方程是什么"></a>2.状态转移方程是什么</h3><h3 id="3-时间复杂度能否满足"><a href="#3-时间复杂度能否满足" class="headerlink" title="3.时间复杂度能否满足"></a>3.时间复杂度能否满足</h3><p>这里可以先看一下<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_70182646/article/details/130301631?spm=1001.2014.3001.5501">点击这里</a>，感受一下动态规划的优点：<del>减少重复计算，降低时间复杂度</del> </p>
 <p>那么接下来我们看看0-1背包问题怎么写呢？</p>
 <h1 id="题目如下"><a href="#题目如下" class="headerlink" title="题目如下"></a>题目如下</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>有 N 件物品和一个容量是 V 的背包。每件物品只能使用一次。</p>
-<p>第 i 件物品的体积是 $v_i$，价值是 $w_i$。</p>
+<p>第 i 件物品的体积是 v<sub>i</sub>，价值是 w<sub>i</sub>。</p>
 <p>求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。<br>输出最大价值。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行两个整数，N，V，用空格隔开，分别表示物品数量和背包容积。</p>
-<p>接下来有 N行，每行两个整数 $v_i,w_i$用空格隔开，分别表示第 i 件物品的体积和价值。</p>
+<p>接下来有 N行，每行两个整数 v<sub>i</sub>,w<sub>i</sub>用空格隔开，分别表示第 i 件物品的体积和价值。</p>
 <h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一个整数，表示最大价值。</p>
 <h2 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h2><p>0&lt;N,V≤1000</p>
-<p>0&lt;$v_i,w_i$≤1000</p>
+<p>0&lt; v<sub>i</sub>,w<sub>i</sub>≤1000</p>
 <h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h2><blockquote>
 <p>4 5<br>1 2<br>2 4<br>3 4<br>4 5</p>
 </blockquote>
@@ -264,7 +270,7 @@
 <p>8</p>
 </blockquote>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我们可以看到数据为0~1000</p>
-<p>如果用dfs的话，数据量是$2^{1000}$,数据量大的惊人，如果没有时间限制，我们让计算机一直跑，肯定会出结果的（反正不是我跑）。但是作为小镇做题家，我们是有时间限制的，那么我们怎么做呢？</p>
+<p>如果用dfs的话，数据量是2<sup>1000</sup>,数据量大的惊人，如果没有时间限制，我们让计算机一直跑，肯定会出结果的（反正不是我跑）。但是作为小镇做题家，我们是有时间限制的，那么我们怎么做呢？</p>
 <p>我们首先定义两个一维数组，分别为w [ ] ,V[ ];这两个数组分别代表价值（worth）和容量（volume）</p>
 <p>那接下来按照我们上面写的思路：</p>
 <h4 id="1：首先"><a href="#1：首先" class="headerlink" title="1：首先"></a>1：首先</h4><p>   我们怎么来表示当前的状态呢？我们先思考一下，我们每次选择物品都有两种选择，要么选要么不选。然后有什么限制条件呢？那当然是选的时候，我们得先看看容量够不够啦，容量不够，想放进去也放不进去QAQ。这里通过各位的一顿分析，可以知道有两个变量，也就是</p>
@@ -292,7 +298,7 @@
 <blockquote>
 <p>dp[i][j]&#x3D;max(dp[i][j],dp[i-1][j-v[i]]+w[i]);</p>
 </blockquote>
-<p>最后我们考虑一下时间复杂度是多少呢？很明显是O（m*n）。我们看一下给的数据最大为1000，当m和n取最大值的话，最大的时间复杂度也只是$10^6$，完全满足题目给的要求。</p>
+<p>最后我们考虑一下时间复杂度是多少呢？很明显是O（m*n）。我们看一下给的数据最大为1000，当m和n取最大值的话，最大的时间复杂度也只是10<sup>6</sup>，完全满足题目给的要求。</p>
 <p>下面我们附上代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="type">int</span> w[N];</span><br><span class="line"><span class="type">int</span> dp[N][N];</span><br><span class="line"><span class="type">int</span> v[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n,m;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)cin&gt;&gt;v[i]&gt;&gt;w[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;=m;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i][j]=dp[i<span class="number">-1</span>][j];</span><br><span class="line">            <span class="keyword">if</span>(j&gt;=v[i])dp[i][j]=<span class="built_in">max</span>(dp[i][j],dp[i<span class="number">-1</span>][j-v[i]]+w[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[n][m]&lt;&lt;endl;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -314,7 +320,7 @@
 <blockquote>
 <p>dp[j]&#x3D;max(dp[j]，dp[j-v]+w);</p>
 </blockquote>
-<p>最后我们思考一下该代码的时间复杂度是多少呢？很明显是小于O(n<em>m)的，上面的O(n</em>m)都行，那这个代码更行了。同时这段代码优化了一层，空间复杂度由原来的O($n^2$)变成了O(n)，直接降了一个度。</p>
+<p>最后我们思考一下该代码的时间复杂度是多少呢？很明显是小于O(n<em>m)的，上面的O(n</em>m)都行，那这个代码更行了。同时这段代码优化了一层，空间复杂度由原来的O(n<sup>2</sup>)变成了O(n)，直接降了一个度。</p>
 <p>代码奉上：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10010</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> N,M;</span><br><span class="line">    cin&gt;&gt;N&gt;&gt;M;</span><br><span class="line">    <span class="comment">//定义状态dp[i]就是重量为i，价值为dp[i]</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;N;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> v,w;</span><br><span class="line">        cin&gt;&gt;v&gt;&gt;w;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=M;j&gt;=v;--j)</span><br><span class="line">         dp[j]=<span class="built_in">max</span>(dp[j],dp[j-v]+w);</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[M]&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
