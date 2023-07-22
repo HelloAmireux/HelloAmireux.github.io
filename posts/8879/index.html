@@ -27,15 +27,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="题目描述1234567891011$$ x^2$ \overset&amp;#123;&amp;#123;-10^100&amp;#125;\leq A \leq &amp;#123;10^100&amp;#125;&amp;#125;$。小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的">
+    <meta name="description" content="题目描述1234567891011小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的数目不足 V  时，无法继续冶炼。现在给出了 N  条冶炼记录，每条记录中包含两个整数 A  和 B ，这表示本次投入了 A  个普通金属 O ，最终冶炼出了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="冶炼金属">
 <meta property="og:url" content="http://example.com/posts/8879/index.html">
 <meta property="og:site_name" content="Amireux&#39;s">
-<meta property="og:description" content="题目描述1234567891011$$ x^2$ \overset&amp;#123;&amp;#123;-10^100&amp;#125;\leq A \leq &amp;#123;10^100&amp;#125;&amp;#125;$。小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的">
+<meta property="og:description" content="题目描述1234567891011小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的数目不足 V  时，无法继续冶炼。现在给出了 N  条冶炼记录，每条记录中包含两个整数 A  和 B ，这表示本次投入了 A  个普通金属 O ，最终冶炼出了">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-16T08:09:24.000Z">
-<meta property="article:modified_time" content="2023-05-12T14:36:46.155Z">
+<meta property="article:modified_time" content="2023-07-22T08:59:13.654Z">
 <meta property="article:author" content="Amireux">
 <meta name="twitter:card" content="summary">
 
@@ -60,10 +60,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-  <!-- 爆炸红心效果 -->
-<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-<script type="text/javascript" src="/js/fireworks.js"></script>
+
 
 <link rel="alternate" href="/atom.xml" title="Amireux's" type="application/atom+xml">
 </head>
@@ -135,7 +132,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/my/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
   </ul>
 </nav>
 
@@ -178,6 +175,11 @@
           <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
 </div>
@@ -244,7 +246,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-12 22:36:46" itemprop="dateModified" datetime="2023-05-12T22:36:46+08:00">2023-05-12</time>
+      <time title="修改时间：2023-07-22 16:59:13" itemprop="dateModified" datetime="2023-07-22T16:59:13+08:00">2023-07-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
     </span>
 
   
@@ -261,7 +272,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.9k</span>
+      <span>2.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -279,7 +290,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$$ x^2</span><br><span class="line">$ \overset&#123;&#123;-10^100&#125;\leq A \leq &#123;10^100&#125;&#125;$。</span><br><span class="line">小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。</span><br><span class="line"></span><br><span class="line">这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的数目不足 V  时，无法继续冶炼。</span><br><span class="line"></span><br><span class="line">现在给出了 N  条冶炼记录，每条记录中包含两个整数 A  和 B ，这表示本次投入了 A  个普通金属 O ，最终冶炼出了 B  个特殊金属 X 。</span><br><span class="line"></span><br><span class="line">每条记录都是独立的，这意味着上一次没消耗完的普通金属 O  不会累加到下一次的冶炼当中。</span><br><span class="line"></span><br><span class="line">根据这 N  条冶炼记录，请你推测出转换率 V  的最小值和最大值分别可能是多少，题目保证评测数据不存在无解的情况。</span><br></pre></td></tr></table></figure>
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">小蓝有一个神奇的炉子用于将普通金属 O冶炼成为一种特殊金属 X。</span><br><span class="line"></span><br><span class="line">这个炉子有一个称作转换率的属性 V，V是一个正整数，这意味着消耗 V  个普通金属 O  恰好可以冶炼出一个特殊金属 X ，当普通金属 O  的数目不足 V  时，无法继续冶炼。</span><br><span class="line"></span><br><span class="line">现在给出了 N  条冶炼记录，每条记录中包含两个整数 A  和 B ，这表示本次投入了 A  个普通金属 O ，最终冶炼出了 B  个特殊金属 X 。</span><br><span class="line"></span><br><span class="line">每条记录都是独立的，这意味着上一次没消耗完的普通金属 O  不会累加到下一次的冶炼当中。</span><br><span class="line"></span><br><span class="line">根据这 N  条冶炼记录，请你推测出转换率 V  的最小值和最大值分别可能是多少，题目保证评测数据不存在无解的情况。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出两个整数，分别表示 V  可能的最小值和最大值，中间用空格分开。</span><br></pre></td></tr></table></figure>
 
@@ -453,6 +466,11 @@ setInterval("createtime()",250);
 <!-- 雪花特效2 -->
 <script type="text/javascript" src="/js/snow2.js"></script>
 
+
+  <!-- 爆炸红心效果 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
