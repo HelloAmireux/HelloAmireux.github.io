@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/flower.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/flower.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/flower.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="记录数模笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mathModels">
+<meta property="og:url" content="http://example.com/posts/55648/index.html">
+<meta property="og:site_name" content="Amireux&#39;s">
+<meta property="og:description" content="记录数模笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830220328576.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830220518364.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830220622999.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830220807393.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830221009519.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830220903847.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830215701797.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830221107218.png">
+<meta property="og:image" content="http://example.com/posts/55648/image-20230830221146047.png">
+<meta property="article:published_time" content="2023-08-30T13:50:29.000Z">
+<meta property="article:modified_time" content="2023-08-30T14:12:45.570Z">
+<meta property="article:author" content="Amireux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/posts/55648/image-20230830220328576.png">
+
+
+<link rel="canonical" href="http://example.com/posts/55648/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/55648/","path":"posts/55648/","title":"mathModels"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>mathModels | Amireux's</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+
+
+<link rel="alternate" href="/atom.xml" title="Amireux's" type="application/atom+xml">
+</head>
+
+<!-- 样式一（鼠标点击更换样式） -->
+<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+
+
+    <a target="_blank" rel="noopener" href="https://helloamireux.github.io/" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; 
+    color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+     aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z">
+     </path>
+     <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,
+     78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,
+     97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm">
+     </path>
+     <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,
+     98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,
+     40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,
+     77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,
+     107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,
+     136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body">
+     </path>
+     </svg>
+     </a>
+     <style>.github-corner:hover 
+     .octo-arm{animation:octocat-wave 560ms ease-in-out}
+     @keyframes octocat-wave{0%,100%{transform:rotate(0)}
+     20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+     @media (max-width:500px){.github-corner:hover .octo-arm{animation:none}
+     .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Amireux's</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">a rubbishman</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E6%95%B0%E6%A8%A1%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">记录数模笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7%EF%BC%88%E7%99%BE%E5%BA%A6%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">搜索技巧（百度）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E5%8C%B9%E9%85%8D%E6%90%9C%E7%B4%A2-%E6%9F%A5%E8%AF%A2%E8%AF%8D%E7%9A%84%E5%A4%96%E8%BE%B9%E5%8A%A0%E4%B8%8A%E5%8F%8C%E5%BC%95%E5%8F%B7%E2%80%9D%E2%80%9D"><span class="nav-number">1.1.1.</span> <span class="nav-text">完全匹配搜索:查询词的外边加上双引号””</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E5%BF%85%E5%90%AB%E5%85%B3%E9%94%AE%E8%AF%8D-%E6%9F%A5%E8%AF%A2%E8%AF%8D%E5%89%8D%E5%8A%A0%E4%B8%8Aintitle"><span class="nav-number">1.1.2.</span> <span class="nav-text">标题必含关键词:查询词前加上intitle:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%96%87%E6%A1%A3-%E4%BE%8B%E5%A6%82%E6%9F%A5%E8%AF%A2%E8%AF%8D%E5%90%8E%E7%A9%BA%E6%A0%BC%E5%86%8D%E8%BE%93%E5%85%A5filetype-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F-doc-x2F-pdf-x2F-xls-x2F-%E7%AD%89%E7%AD%89"><span class="nav-number">1.1.3.</span> <span class="nav-text">搜索文档:例如查询词后空格再输入filetype:文件格式(doc&#x2F;pdf&#x2F;xls&#x2F;等等)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E6%8E%89%E4%B8%8D%E6%83%B3%E8%A6%81%E7%9A%84-%E6%9F%A5%E8%AF%A2%E8%AF%8D%E5%90%8E%E9%9D%A2%E5%8A%A0%E7%A9%BA%E6%A0%BC%E5%90%8E%E5%8A%A0%E5%87%8F%E5%8F%B7%E4%B8%8E%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.2.</span> <span class="nav-text">去掉不想要的:查询词后面加空格后加减号与关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%96%87%E7%8C%AE"><span class="nav-number">1.3.</span> <span class="nav-text">查文献</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%A3%80%E7%B4%A2-%E6%83%B3%E4%BA%86%E8%A7%A3%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9C%A8%E4%BF%A1%E8%B4%B7%E7%AD%96%E7%95%A5%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%8C%E6%83%B3%E6%89%BE%E4%B8%80%E4%BA%9B%E7%9B%B8%E5%85%B3%E7%9A%84%E7%A1%95%E5%8D%9A%E8%AE%BA%E6%96%87"><span class="nav-number">1.3.1.</span> <span class="nav-text">高级检索:想了解神经网络在信贷策略中的应用，想找一些相关的硕博论文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99"><span class="nav-number">1.3.2.</span> <span class="nav-text">部分相关网站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.4.</span> <span class="nav-text">查数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E7%BD%91%E3%80%81%E8%B0%B7%E6%AD%8C%E5%AD%A6%E6%9C%AF%E7%AD%89%E5%B9%B3%E5%8F%B0%E6%90%9C%E7%B4%A2%E5%9B%BD%E5%AE%B6%E7%BB%9F%E8%AE%A1%E5%B1%80"><span class="nav-number">1.4.1.</span> <span class="nav-text">知网、谷歌学术等平台搜索国家统计局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#awesome-public-datasets"><span class="nav-number">1.4.2.</span> <span class="nav-text">awesome-public-datasets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EPSDATA%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.4.3.</span> <span class="nav-text">EPSDATA平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96-%E5%9B%BD%E5%AE%B6%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83%EF%BC%8Ckaggle%EF%BC%8C%E5%92%8C%E9%B2%B8%E7%A4%BE%E5%8C%BA"><span class="nav-number">1.4.4.</span> <span class="nav-text">其他:国家信息中心，kaggle，和鲸社区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">数据预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E7%89%88%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.6.</span> <span class="nav-text">排版注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%AF%87"><span class="nav-number">1.7.</span> <span class="nav-text">线性规划篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%AF%87"><span class="nav-number">1.8.</span> <span class="nav-text">非线性规划篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="nav-number">1.9.</span> <span class="nav-text">最短路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="nav-number">1.10.</span> <span class="nav-text">最小生成树</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amireux"
+      src="/images/blog.jpg">
+  <p class="site-author-name" itemprop="name">Amireux</p>
+  <div class="site-description" itemprop="description">我喜欢雨，因为它带着天空的气息</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/helloAmireux" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;helloAmireux" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://cdn.acwing.com/media/article/image/2023/07/23/247975_ae7f2a9429-qq.png" title="QQ → https:&#x2F;&#x2F;cdn.acwing.com&#x2F;media&#x2F;article&#x2F;image&#x2F;2023&#x2F;07&#x2F;23&#x2F;247975_ae7f2a9429-qq.png" rel="noopener me" target="_blank"><i class="fab fa-book fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/55648/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/blog.jpg">
+      <meta itemprop="name" content="Amireux">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Amireux's">
+      <meta itemprop="description" content="我喜欢雨，因为它带着天空的气息">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="mathModels | Amireux's">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mathModels
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-08-30 21:50:29 / 修改时间：22:12:45" itemprop="dateCreated datePublished" datetime="2023-08-30T21:50:29+08:00">2023-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/math/" itemprop="url" rel="index"><span itemprop="name">math</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="记录数模笔记"><a href="#记录数模笔记" class="headerlink" title="记录数模笔记"></a>记录数模笔记</h1><span id="more"></span>
+
+
+
+
+
+<h2 id="搜索技巧（百度）"><a href="#搜索技巧（百度）" class="headerlink" title="搜索技巧（百度）"></a>搜索技巧（百度）</h2><h3 id="完全匹配搜索-查询词的外边加上双引号””"><a href="#完全匹配搜索-查询词的外边加上双引号””" class="headerlink" title="完全匹配搜索:查询词的外边加上双引号””"></a>完全匹配搜索:查询词的外边加上双引号””</h3><ul>
+<li>引号中英文均可      例如我需要查找武汉城市学院，百度可能会出现”武汉这座英雄城市有一所学院balabala“，但是我们要找的是武汉城市学院，当我们加上引号之后只会出现有关于”武汉城市学院“</li>
+</ul>
+<h3 id="标题必含关键词-查询词前加上intitle"><a href="#标题必含关键词-查询词前加上intitle" class="headerlink" title="标题必含关键词:查询词前加上intitle:"></a>标题必含关键词:查询词前加上intitle:</h3><ul>
+<li>冒号为英文输入下的            例如我需要查找武汉城市学院，百度可能会出现”标题”全国民办大学排行榜“，然后内容里面有武汉城市学院，但是当我们加上intitle则所有的标题里面都含有“武汉城市学院”</li>
+</ul>
+<h3 id="搜索文档-例如查询词后空格再输入filetype-文件格式-doc-x2F-pdf-x2F-xls-x2F-等等"><a href="#搜索文档-例如查询词后空格再输入filetype-文件格式-doc-x2F-pdf-x2F-xls-x2F-等等" class="headerlink" title="搜索文档:例如查询词后空格再输入filetype:文件格式(doc&#x2F;pdf&#x2F;xls&#x2F;等等)"></a>搜索文档:例如查询词后空格再输入filetype:文件格式(doc&#x2F;pdf&#x2F;xls&#x2F;等等)</h3><ul>
+<li>例如搜索:”张子烨的论文filetype:pdf “</li>
+</ul>
+<h2 id="去掉不想要的-查询词后面加空格后加减号与关键字"><a href="#去掉不想要的-查询词后面加空格后加减号与关键字" class="headerlink" title="去掉不想要的:查询词后面加空格后加减号与关键字"></a>去掉不想要的:查询词后面加空格后加减号与关键字</h2><ul>
+<li>例如搜索后不想看csdn的东西，搜索“张子烨的论文filetype:pdf -csdn”</li>
+</ul>
+<h2 id="查文献"><a href="#查文献" class="headerlink" title="查文献"></a>查文献</h2><h3 id="高级检索-想了解神经网络在信贷策略中的应用，想找一些相关的硕博论文"><a href="#高级检索-想了解神经网络在信贷策略中的应用，想找一些相关的硕博论文" class="headerlink" title="高级检索:想了解神经网络在信贷策略中的应用，想找一些相关的硕博论文"></a>高级检索:想了解神经网络在信贷策略中的应用，想找一些相关的硕博论文</h3><ol>
+<li><p>进入高级检索界面，“+”和“-”可以自定义增加和减少检索字段</p>
+</li>
+<li><p>主题为:企业信贷</p>
+</li>
+<li><p>OR主题为:信贷决策</p>
+</li>
+<li><p>AND 关键词:神经网络，词频设置为“模糊”。模糊”是输入的检索词在检索结果中出现字间间隔可以产生变化。</p>
+</li>
+<li><p>检索结果可按“相关度”或“被引”排序</p>
+</li>
+</ol>
+<h3 id="部分相关网站"><a href="#部分相关网站" class="headerlink" title="部分相关网站"></a>部分相关网站</h3><ol>
+<li>谷歌学术镜像 <a target="_blank" rel="noopener" href="http://scholar.hedasudi.com/">http://scholar.hedasudi.com/</a></li>
+<li>open Access Library  <a target="_blank" rel="noopener" href="https://www.oalib.com/">https://www.oalib.com/</a></li>
+</ol>
+<h2 id="查数据"><a href="#查数据" class="headerlink" title="查数据"></a>查数据</h2><h3 id="知网、谷歌学术等平台搜索国家统计局"><a href="#知网、谷歌学术等平台搜索国家统计局" class="headerlink" title="知网、谷歌学术等平台搜索国家统计局"></a>知网、谷歌学术等平台搜索国家统计局</h3><ul>
+<li>最全面，月度季度年度，各地区各部门各行业，包罗万象</li>
+<li><a target="_blank" rel="noopener" href="https://data.stats.gov.cn/">https://data.stats.gov.cn/</a></li>
+<li>其他国家部门网站大多都有数据分页，如果需要可另行查找</li>
+</ul>
+<h3 id="awesome-public-datasets"><a href="#awesome-public-datasets" class="headerlink" title="awesome-public-datasets"></a>awesome-public-datasets</h3><p>GitHub上的一个项目，包含了经济、地理、能源、教育等所有你能想到的领域的数据<a target="_blank" rel="noopener" href="https://github.com/awesomedata/awesome-public-datasets">https://github.com/awesomedata/awesome-public-datasets</a></p>
+<h3 id="EPSDATA平台"><a href="#EPSDATA平台" class="headerlink" title="EPSDATA平台"></a>EPSDATA平台</h3><p>EPSDATA平台有丰富的数据资源和大量分析处理过的数据结果，是收费的，不过可以申请7天的试用. <a target="_blank" rel="noopener" href="https://www.epsnet.com.cn/">https://www.epsnet.com.cn/</a></p>
+<h3 id="其他-国家信息中心，kaggle，和鲸社区"><a href="#其他-国家信息中心，kaggle，和鲸社区" class="headerlink" title="其他:国家信息中心，kaggle，和鲸社区"></a>其他:国家信息中心，kaggle，和鲸社区</h3><h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><ol>
+<li>缺失值</li>
+</ol>
+<ul>
+<li>当缺失太多，超过30%，直接删除</li>
+<li>缺失的不多<ul>
+<li>最简单的处理：均值，众值插入<ul>
+<li>**适用赛题:**人口的数量年龄、经济产业情况等统计数据，对个体精度要求不大的数据</li>
+</ul>
+</li>
+<li>牛顿插值法<ul>
+<li>根据固定公式，构造近似函数，补上缺失值，普遍适用性强，但是缺点是：区间边缘处的不稳定震荡，即龙格现象。不适合对导数有要求的题目</li>
+<li>**适用赛题:**热力学温度、地形测量、定位等只追求函数值精准而不关心变化的数据</li>
+</ul>
+</li>
+<li>样条插值法：<ul>
+<li>用分段光滑的曲线去插值，光滑意味着曲线不仅连续，还要有连续的曲率</li>
+<li>**适用赛题:**零件加工，水库水流量，图像“基线漂移”，机器人轨迹等精度要求高、没有突变的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>异常值</li>
+</ol>
+<ul>
+<li>当样本中明显和其他数值差异很大的数据，例如一群人的身高数据中有个3米2的，直接删掉<ul>
+<li>正态分布原则3σ原则<ul>
+<li>求解步骤:<ul>
+<li>1.计算均值u和标准差σ</li>
+<li>2.判断每个数据值是否在（u-3σ,u +3 σ )内，不在则为异常值σ</li>
+</ul>
+</li>
+<li><strong>适用题目</strong>:总体符合正态分布，例如人口数据、测量误差、生产加工质量、考试成绩等</li>
+<li>**不适用题目:**总体符合其他分布，例如公交站人数排队论符合泊松分布</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="排版注意事项"><a href="#排版注意事项" class="headerlink" title="排版注意事项"></a>排版注意事项</h2><ol>
+<li><p><strong>各级标题</strong>与正文层次分明</p>
+<ul>
+<li>一般标题级别不超过三级</li>
+<li>正文中文字体设置宋体、英文Times New Roman</li>
+</ul>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830220328576.png" alt="image-20230830220328576"></p>
+<p><strong>好家伙，直接三段文字三段不一样的字体，字号，行间距，直接展现出了作者的强大的office的功底</strong></p>
+</li>
+<li><p>正文排版紧凑，看起来充实，没有大片空白</p>
+<ul>
+<li>避免图片过大导致出现大片空白，且不要留有空行</li>
+</ul>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830220518364.png" alt="image-20230830220518364"></p>
+<p><strong>这片空白像我的脑子一样</strong></p>
+</li>
+<li><p>表格与图片</p>
+<ul>
+<li>表格用标准的<strong>三线表</strong>(不要用网格表，血的教训)</li>
+<li>‘<strong>表的标题放在表的上方，图名放在图的下方</strong></li>
+</ul>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830220622999.png" alt="image-20230830220622999"></p>
+<p><strong>标准的错误，经典的零分								—武忠祥</strong></p>
+<p>正面例子：</p>
+<p><img src="/posts/55648/image-20230830220807393.png" alt="image-20230830220807393"></p>
+<p><strong>表下图上，加分！</strong></p>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830221009519.png" alt="image-20230830221009519"></p>
+<p><strong>人首分离了属于是</strong></p>
+</li>
+<li><p>公式编辑</p>
+<ul>
+<li>建议用markdown或者是latex编写公式</li>
+<li>公式需要解释清楚每个变量的意义;每个公式后面带有编号</li>
+</ul>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830220903847.png" alt="image-20230830220903847"></p>
+<p><strong>你倒是标注序号啊</strong></p>
+</li>
+<li><p>标题   <strong>（基于xxx模型的xxx问题研究）</strong></p>
+<ul>
+<li>读完标题，就能知道本文建的是什么模型，选一些通俗易懂的词汇</li>
+<li>避免出现公式、非公知公用的缩写</li>
+<li>字数限制在一行内</li>
+<li>xxx模型就是最重要的模型，xxx问题就是赛题的中心词</li>
+</ul>
+</li>
+<li><p><strong>摘要（最重要的）</strong></p>
+<ul>
+<li><p>基本要求</p>
+<ul>
+<li>摘要是对论文的高度概括总结</li>
+<li>让评阅老师读完摘要，就知道本文解决的问题、建立的模型和求解结果。</li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>不能出现图表或者是表格</li>
+<li>控制在3&#x2F;4页到一页，字数大约在800~1000，同时一定要段落清晰</li>
+</ul>
+</li>
+<li><p>格式如下：<br><strong>开头段模板</strong>:本文主要研究了XXX问题。根据XXX，利用XXX模型&#x2F;方法，求解出XXX。</p>
+<ul>
+<li>第一句：说清楚研究的问题</li>
+<li>第二句：说清全文采用的模型&#x2F;算法，采取的操作</li>
+<li>开头段不要求写结果</li>
+</ul>
+<p>**中间段模板:**针对问题一&#x2F;二&#x2F;三&#x2F;…，考虑&#x2F;根据XXX，…，建立XXX模型&#x2F;利用XXX方法，…求解出XXX。</p>
+<ul>
+<li>一定要写清结果！<ul>
+<li>优化类、预测类和物理类的题目，要明确写清数值</li>
+<li>要求提供建议或评价的题目，写要明确写清结论和数据依据，但不要有表格;数据过多可说明数据见附录</li>
+</ul>
+</li>
+</ul>
+<p><strong>结尾：</strong></p>
+<ul>
+<li>如果写完后摘要超过一页了，可以不写</li>
+<li>不要累赘重复前面写过的内容</li>
+<li>写一些本文的特色、自夸的语句<strong>（吹牛逼，先把评委骗到手再说）</strong></li>
+</ul>
+<p><strong>摘要：</strong></p>
+<ul>
+<li>关键词一般4~6个</li>
+<li>使用的模型和算法、大家都知道的专业名词、问题的关键词</li>
+<li>中间以空格分开</li>
+</ul>
+</li>
+</ul>
+<p><strong>反面例子：</strong></p>
+<p><img src="/posts/55648/image-20230830215701797.png" alt="image-20230830215701797"></p>
+<p><strong>作为一篇失败的论文，这篇论文是成功的，我们可以看到，他对四个问题采用了三种不同的表达方式，直接显示出了巨大的词汇量。接着就是一记中文标点，直接占了好几个位置，真可谓水文是好办法啊。接下来又是一记中文括号，直接干出一大片白色，打算给与评委视觉上的冲击。然后就是数据的列出，一长条数据直接震惊评委，直接让评委垂死病中惊坐起。</strong></p>
+</li>
+<li><p>参考文献</p>
+<ul>
+<li>引用文献或公开资料都必须按规范列出参考文献并在正文对应处标注</li>
+<li>学一下知网如何引用</li>
+<li>遇到网上的说得对，但是名气不高的文献，将里面的话用自己的话说一遍就好了，不然引用了别人评委不知道直呼：哪来的野鸡论文hhh</li>
+</ul>
+<p>反面例子：</p>
+<p><img src="/posts/55648/image-20230830221107218.png" alt="image-20230830221107218"></p>
+<p><strong>一眼手打，排版还不齐</strong></p>
+</li>
+<li><p>制图</p>
+<ul>
+<li><p>基本要求</p>
+<ul>
+<li>首先就是能展示自己的思路，还能完美的表现自己的结果</li>
+<li>能花里胡哨就花里胡哨，但是前提是不能伤害展示的思路</li>
+<li>图的标题要放在下方，且带有编号（表上图下)·注意排版</li>
+<li>要无首行缩进，居中对齐</li>
+</ul>
+</li>
+<li><p>常见的制图软件：</p>
+<ul>
+<li>最简单:PPT、Excle、Origin、visio</li>
+<li>编程类:Python、 MATLAB、SPSS</li>
+<li>非学术类：亿图</li>
+<li>比较好的：ECharts,js写的    地址：<a target="_blank" rel="noopener" href="https://echarts.apache.org/examples/zh/index.html">https://echarts.apache.org/examples/zh/index.html</a></li>
+</ul>
+<p>正面例子：<img src="/posts/55648/image-20230830221146047.png" alt="image-20230830221146047"></p>
+<p><strong>好看，爱看，会画就多画一点！！！</strong></p>
+</li>
+</ul>
+<h2 id="线性规划篇"><a href="#线性规划篇" class="headerlink" title="线性规划篇"></a>线性规划篇</h2><p><strong>一句话：有限条件求极值</strong></p>
+<ul>
+<li><p>关键词   题目中提到“怎样安排&#x2F;分配”“尽量多(少)”“最多(少)”“利润最大”“最合理”等词</p>
+<ul>
+<li>生产安排:原材料、设备有限制，总利润最大<ul>
+<li>生产两种机床，利润分别为XXX，A机器和B机器加工，两种机器工作时间…;怎样安排生产使得总<br>利润最大?</li>
+</ul>
+</li>
+<li>投资收益:资产配置、收益率、损失率、组合投资、总收益最大<ul>
+<li>总资金为M，有n种资产可以配置，平均收益率…，风险损失率.，手续费…，设计组合投资方案使<br>得收益尽可能大，总体风险尽可能小</li>
+</ul>
+</li>
+<li>销售运输:产地、销地、产量、销量、运费，总运费最省<ul>
+<li>商品有m个产地和n个销地，各产地的产量…，各销地需求量….由a产地运到b销地的运价xxx;如何<br>调运才能使总运费最省?</li>
+</ul>
+</li>
+<li>车辆安排:路线、起点终点、承载量、时间点、车次安排最合理<ul>
+<li>不同种类的车辆有各自的承载量，工地里有多条路线，满足用工需求的情况下，如何安排车辆能使<br>产量尽可能大?</li>
+</ul>
+</li>
+</ul>
+<p>matlab用<strong>linprog</strong>函数就行，具体自查函数用法，懒得写了</p>
+</li>
+</ul>
+<h2 id="非线性规划篇"><a href="#非线性规划篇" class="headerlink" title="非线性规划篇"></a>非线性规划篇</h2><p><strong>上面的是一次方的，非线性规划篇是高次的</strong></p>
+<ul>
+<li><p>关键词：题目中提到“怎样安排&#x2F;分配”“尽量多(少)”“最多(少)”“利润最大”“最合理”等词;但变量非一次方</p>
+<ul>
+<li>投资规划:资产配置、收益率、损失率、组合投资、总收益率最大&#x2F;最佳投资方案<ul>
+<li>总资金为M，有n种资产可以配置，平均收益率.，风险损失率..，手续费..，设计组合投资方案使得收益尽可能大，总体风险尽可能小</li>
+</ul>
+</li>
+<li>角度调整:飞行管理避免相撞;影院最佳视角<ul>
+<li>飞机位置，速度，进入区域后判定是否相撞，飞机飞行方向角调整的幅度尽量小</li>
+<li>电影院视角、仰角影响观影体验，什么位置观影最佳</li>
+<li>涉及三角函数，为非线性</li>
+</ul>
+</li>
+<li>生产安排:原材料、设备有限制，总利润最大(目标函数或约束条件含有非线性变量)<ul>
+<li>生产两种机床，利润分别为XXX，A机器和B机器加工，两种机器工作时间..;成本或利润与某变量的</li>
+<li>关系是非线性的，例如A机器每小时生产费用是f &#x3D; 50x +0.2x^2(元)，安排生产使得总利润最大</li>
+</ul>
+</li>
+</ul>
+<p>函数用fmincon</p>
+</li>
+</ul>
+<h2 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h2><p>函数：graphshortestpath		迪杰斯特拉算法不做过多详细说明</p>
+<p>w&#x3D;[1,2,3,4]&#x2F;&#x2F;权重</p>
+<p>DG&#x3D;sparse（[in1,in2,in3,in4],[out1,out2,out3,out4],w）&#x2F;&#x2F;前面的是入度，后面的是出度</p>
+<p>[dist,path,pred]&#x3D;graphshortestpath(DG,1,3)&#x2F;&#x2F;图，起始点，终点</p>
+<p>point_name&#x3D;[“入度1”,“入度2”,“入度3”,“入度4”]&#x2F;&#x2F;到时候画图能显示</p>
+<p>h&#x3D;view（biograph（DG，point_name，“showweights”，“on”））&#x2F;&#x2F;显示</p>
+<p>edges&#x3D;getedgsbynodeid(h.Nodes(path),”ID”);</p>
+<p>set(edges,”LineColor”,[1,0,0])&#x2F;&#x2F;yanse</p>
+<p>set(edges,’LineWidth’,3)&#x2F;&#x2F;粗细</p>
+<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2></li>
+</ol>
+<p>普利姆算法和克鲁斯卡尔算法，相当于dfs和bfs</p>
+
+    </div>
+
+    
+    
+    
+
+            <div>
+        
+            
+
+        
+            </div>
+
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/23468/" rel="prev" title="Hello Amireux">
+                  <i class="fa fa-chevron-left"></i> Hello Amireux
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amireux</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">47k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">42 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/12/2023 18:19:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "网站已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- 雪花特效2 -->
+<script type="text/javascript" src="/js/snow2.js"></script>
+
+
+  <!-- 爆炸红心效果 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
